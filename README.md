@@ -1,6 +1,5 @@
-Here’s a polished **`README.md`** in proper markdown format for your project:
 
-```markdown
+````markdown
 # 📄 Mini PDF QA App
 
 A minimal **Next.js** application that allows users to upload PDFs, generate embeddings, and query them in natural language using an LLM.  
@@ -8,16 +7,15 @@ A minimal **Next.js** application that allows users to upload PDFs, generate emb
 ---
 
 ## 🚀 Features
-- **PDF Upload & Parsing** – Extracts text from uploaded PDFs.  
-- **Embeddings** – Uses vector embeddings to store and search PDF content.  
-- **Question Answering** – Ask natural language questions about the uploaded PDFs.  
-- **Chat UI** – Interactive chat interface with message bubbles.  
+- 📑 **PDF Upload & Parsing** – Extracts text from uploaded PDFs.  
+- 🧠 **Embeddings** – Uses vector embeddings to store and search PDF content.  
+- ❓ **Question Answering** – Ask natural language questions about the uploaded PDFs.  
+- 💬 **Chat UI** – Interactive chat interface with message bubbles.  
 
 ---
 
 ## 📂 Project Structure
-```
-
+```bash
 app/
 ├── api/ask/route.ts      # API route for answering questions
 ├── api/upload/route.ts   # API route for uploading PDFs
@@ -33,18 +31,18 @@ lib/
 ├── embeddings.ts         # Embedding generation logic
 ├── pdf.ts                # PDF parsing helpers
 ├── vector.ts             # Vector database operations
-
 ````
 
 ---
 
 ## ⚙️ Setup Instructions
 
-1. **Clone the repo**
+1. **Clone the repository**
+
    ```bash
    git clone https://github.com/your-username/mini-pdf-qa-app.git
    cd mini-pdf-qa-app
-````
+   ```
 
 2. **Install dependencies**
 
@@ -52,8 +50,8 @@ lib/
    npm install
    ```
 
-3. **Configure environment variables**
-   Create a `.env.local` file in the root with your API key:
+3. **Set up environment variables**
+   Create a `.env.local` file in the root and add your OpenAI API key:
 
    ```env
    OPENAI_API_KEY=your_openai_api_key
@@ -71,7 +69,7 @@ lib/
 
 ## 💡 Approach
 
-1. **Upload & Extract** – Users upload PDFs via `FileUploader.tsx`, handled by `app/api/upload/route.ts`. Text is extracted using `lib/pdf.ts`.
+1. **Upload & Extract** – Users upload PDFs via `FileUploader.tsx`, handled by `app/api/upload/route.ts`. The text is extracted using `lib/pdf.ts`.
 2. **Embeddings & Storage** – Extracted text is converted into embeddings (`lib/embeddings.ts`) and stored in a vector store (`lib/vector.ts`).
 3. **Querying** – When users ask questions (`QuestionBox.tsx`), the backend (`app/api/ask/route.ts`) retrieves relevant chunks from the vector DB and queries the LLM for an answer.
 4. **Interactive UI** – Messages are displayed in a conversational format with `MessageBubble.tsx`.
@@ -80,21 +78,37 @@ lib/
 
 ## 📌 Tech Stack
 
-* **Next.js 13+ (App Router)**
-* **TypeScript**
-* **TailwindCSS**
-* **OpenAI API**
-* **Vector Search for Retrieval**
+* ⚛️ **Next.js 13+ (App Router)**
+* 🔷 **TypeScript**
+* 🎨 **TailwindCSS**
+* 🤖 **OpenAI API**
+* 📚 **Vector Search (for retrieval)**
+
+---
+
+## 🚀 Deployment (Vercel)
+
+1. Push your project to GitHub.
+2. Go to [Vercel](https://vercel.com/) and create a new project.
+3. Import your GitHub repo.
+4. Add your environment variable in **Vercel → Project Settings → Environment Variables**:
+
+   ```
+   OPENAI_API_KEY=your_openai_api_key
+   ```
+5. Deploy 🚀 — Vercel will build and host your app automatically.
 
 ---
 
 ## 📜 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
+
+---
 
 ```
 
 ---
 
-Do you want me to also add a **deployment guide (Vercel)** section to this README so it's production-ready, or keep it minimal for local setup only?
+Would you like me to also add a **Demo / Screenshots** section with placeholders (so you can drop in images of your UI later), or keep it clean and minimal?
 ```
